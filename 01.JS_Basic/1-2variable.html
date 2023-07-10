@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수와 상수</title>
+</head>
+<body>
+    <script>
+        //변수 : 이름 붙은 저장소
+
+        //<변수 이름 규칙>
+        //1. 기호 사용 X - 가능한 기호: _, $
+        //2. 숫자가 앞에 붙으면 에러
+        //3. 예약어 X
+        let age = 25;
+        console.log(age); // 25
+
+        age = 30;
+        console.log(age); // 30
+
+        //4. let - 중복 선언 금지 > let 사용 권장
+        var number = 25;
+        console.log(age);
+
+        var number = 30;
+        console.log(age);
+
+        //상수 : 값이 변하지 않음
+        const num = 20; // 선언 이후 값을 바꿀 수 없다
+        console.log(num);
+
+        // num = 30;
+    </script>
+</body>
+</html>
