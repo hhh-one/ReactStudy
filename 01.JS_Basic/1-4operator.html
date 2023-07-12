@@ -33,8 +33,16 @@
         console.log(true || false); //|| : or
 
         //비교 연산자
-        console.log(a === b);
+        console.log(1 == '1'); //값만 비교
+        console.log(1 === '1'); //값 & 타입 비교
 
+        //typeof 연산자
+        console.log(a);
+
+        //null병합 연산자
+        let c;
+        c = c ?? 10;
+        console.log(c); //10
     </script>
 </body>
 </html>

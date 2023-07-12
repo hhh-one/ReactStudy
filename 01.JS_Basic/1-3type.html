@@ -10,6 +10,37 @@
         //원시 타입(Primitive Type) : 한번에 하나의 값만 가질 수 있다. 
         //하나의 고정된 저장공간 이용
         
+        //1. number
+        let age = 25;
+        let tall = 175.9;
+        let inf = Infinity; //무한대
+        let minusInf = -Infinity;
+        let nan = NaN; //수학적 연산의 실패
+
+        //2. string
+        let name = 'winterlood';
+        let name2 = "이혜원";
+        let name3 = `winterlood ${name2}`; //백틱 - ${변수 값} (템플릿 리터럴)
+        
+        //3. boolean
+        let isSwitchOff = true;
+
+        //4. undifined - 값을 할당하지 않았을 때
+        let a;
+        console.log(a); //undifined
+
+        //5. null
+        let a1 = null;
+
+        // -------------------형변환-------------------------
+        let numberA = 12;
+        let numberB = "2"; //묵시적 형변환
+
+        console.log(numberA * numberB); //24
+
+        console.log(numberA + numberB); //122
+        console.log(numberA + parseInt(numberB)); //14
+        
 
         //비원시 타입(Non-Primitive Type) : 한번에 여러 개의 값을 가질 수 있다.
         //여러 개의 고정되지 않은 동적 공간 사용
