@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 표현식 & 화살표 함수</title>
+</head>
+<body>
+    <script>
+        //함수도 자료형이기 때문에 변수나 상수에 담아서 사용 가능
+        console.log(helloA()); //호이스팅 : 함수선언식은 코드의 최상단으로 올려진다
+
+        function helloA() {
+            return '안녕하세요 여러분'
+        } //함수 선언식 - 호이스팅 O
+
+        let helloB = function() {
+            return '안녕하세요 여러분';
+        } //함수 표현식 - 호이스팅 X
+
+        let hello = () => '안녕하세요 여러분'; //화살표 함수 
+
+        console.log(helloB());
+    </script>
+</body>
+</html>

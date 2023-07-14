@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백 함수</title>
+</head>
+<body>
+    <script>
+        //콜백함수 : 어떤 함수의 매개변수로 함수를 넘겨준 것
+        function checkMood(mood, goodCallback, badCallback) {
+            if (mood === 'good') {
+                goodCallback();
+            } else {
+                badCallback();
+            }
+        }
+
+        function cry() {
+            console.log('ACTION :: CRY');
+        }
+
+        function smile() {
+            console.log('ACTION :: SMILE');
+        }
+
+        checkMood('sad', sing, cry);
+    </script>
+</body>
+</html>
