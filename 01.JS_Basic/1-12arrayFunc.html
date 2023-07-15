@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 내장함수</title>
+</head>
+<body>
+    <script>
+        //forEach - 배열 순회
+        const arr = [1, 2, 3, 4];
+        arr.forEach(function (element) {
+            // newArr.push(element * 2);
+        });
+
+        //map
+        const newArr = arr.map(element => element * 2);
+        console.log(newArr);
+
+        //include - 해당 변수가 포함되는지
+        let number = 3;
+        console.log(arr.includes(number));
+
+        //indexOf - 해당 변수가 몇번째 인덱스에 있는지
+        let num = "3";
+        console.log(arr.indexOf(num)); //-1 : 없다
+
+        //findIndex
+        const arr2 = [
+            {color: 'red'},
+            {color: 'black'},
+            {color: 'blue'},
+            {color: 'green'},
+            {color: 'green'}
+        ]
+        console.log(arr2.findIndex(elm => elm.color === 'green')); //첫번째로 찾은 인덱스를 반환
+
+        //find
+        console.log(arr2.find(elm => elm.color === 'green')); //해당 조건에 맞는 첫번째의 변수를 반환
+
+        //filter
+        console.log(arr2.filter(elm => elm.color === 'green'));
+
+        //slice - 배열 자르기
+        console.log(arr2.slice(1, 2)); //1이상 2미만
+
+        //concat - 배열 붙이기
+        console.log(arr.concat(arr2));
+
+        //sort - 배열 정렬
+        let chars = ['나', '다', '가'];
+        chars.sort();
+        console.log(chars);
+
+        let numbers = [2, 5, 20, 1, 4, 10];
+        numbers.sort();
+        console.log(numbers);
+    </script>
+</body>
+</html>

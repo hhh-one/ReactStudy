@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <script>
+        //객체 생성 방법
+        let o1 = new Object(); //생성자 방식
+        let o2 = {}; //객체 리터럴 방식
+
+        let person = {
+            key: 'value', //프로퍼티 (객체 프로퍼티)
+            key1: 'value2',
+            key2: true,
+            key3: [1, 2],
+            key4: undefined,
+            key5: function() {}
+        }
+        console.log(person);
+
+        //프로퍼티를 꺼내서 사용하는 방법(표기법)
+        console.log(person.key); //점 표기법
+        console.log(person.key2);
+        console.log(person['key']); //괄호 표기법 
+        //주의*) 프로퍼티의 키를 문자열 형태로 넣어야 한다 (person[key]면 key를 변수로 인식)
+        
+        console.log(getPropertyValue('key'));
+
+        function getPropertyValue (key) {
+            return person[key];
+        }
+
+        //---------------------------------------------------
+        //let이 아닌 const로 해도 추가 삭제가 가능
+        //-> 프로퍼티값을 수정하는 행위는 p라는 상수를 수정하는 행위가 아니기 때문
+        //-> p가 갖는 객체를 수정하는 행위이지 p라는 상수를 수정하는 것이 아님
+        const p = {
+            name: '이혜원',
+            age: 25, //멤버
+            say: function () { //메서드
+                console.log(`안녕 나는 ${this.name}`);
+            }
+        };
+
+        // p = {
+        //     name: '이혜원'
+        // };
+
+        //프로퍼티 추가
+        p.location = '한국';
+        p['gender'] = '여성';
+
+        //프로퍼티 수정
+        p.age = 23;
+
+        //프로퍼티 삭제 - 메모리에서 값이 지워지지 않음 (메모리를 계속 쓰고 있다)
+        delete p['age'];
+        p.age = null; //메모리에서 날리는 법
+
+        p['say']();
+
+        console.log(p);
+
+        //객체에 해당 프로퍼티가 있는지 확인
+        console.log(`name: ${"name" in p}`);
+    </script>
+</body>
+</html>
