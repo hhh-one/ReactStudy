@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+</head>
+<body>
+    <script>
+        let a = 3; 
+
+        //if 
+        if (a >= 0) {
+            console.log('양수');
+        } else {
+            console.log('음수');
+        }
+        //삼항 연산자
+        a >= 0 ? console.log('양수') : console.log('음수');
+
+        let arr = [];
+        if (arr.length === 0) {
+            console.log('빈 배열');
+        } else {
+            console.log('요소가 있는 배열');
+        }
+
+        arr.length === 0 ? console.log('빈 배열') : console.log('요소가 있는 배열');
+    </script>
+</body>
+</html>
