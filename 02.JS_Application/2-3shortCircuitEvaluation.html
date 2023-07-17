@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단락 회로 평가</title>
+</head>
+<body>
+    <script>
+        //단락 회로 평가 : 뒤에 위치한 피연산자는 볼 필요없이 연산을 끝내버리는것
+
+        //논리연산자 : && || !
+        console.log(false && true);
+        console.log(true || false);
+        console.log(!true);
+
+        const getName = (person) => {
+            const name = person && person.name;
+            return name || '객체가 아닙니다';
+        };
+
+        let person;
+        const name = getName(person);
+        console.log(name);
+</script>
+</body>
+</html>

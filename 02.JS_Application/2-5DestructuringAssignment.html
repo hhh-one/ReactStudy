@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 분해 할당(비 구조화 할당)</title>
+</head>
+<body>
+    <script>
+        //배열
+        let arr = ['one', 'two', 'three'];
+        
+        let [one, two, three] = arr;
+        console.log(one, two, three);
+
+        //swap
+        let a = 10;
+        let b = 20;
+        [a, b] = [b, a];
+        console.log(a, b);
+
+        //객체
+        let obj = {one: 'one', two: 'two', three: 'three'};
+        let {one : o, two : t, three : th} = obj;
+    </script>
+</body>
+</html>

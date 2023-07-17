@@ -19,13 +19,29 @@
         a >= 0 ? console.log('양수') : console.log('음수');
 
         let arr = [];
+        
+        //if
         if (arr.length === 0) {
             console.log('빈 배열');
         } else {
             console.log('요소가 있는 배열');
         }
-
+        //삼항 연산자
         arr.length === 0 ? console.log('빈 배열') : console.log('요소가 있는 배열');
+
+        //학점 계산 프로그램
+        // 90점 이상 A+, 50점 이상 B+, 둘 다 아니면 F
+        //중첩 삼항 연산자 - 가독성이 떨어짐 => if문 이용
+        let score = 40;
+        score >= 90 ? console.log('A+') : (score >= 50 ? console.log('B+') : console.log('F'));
+
+        if (score >= 90) {
+            console.log('A+');
+        } else if (score >= 50) {
+            console.log('B+');
+        } else {
+            console.log('F');
+        }
     </script>
 </body>
 </html>
