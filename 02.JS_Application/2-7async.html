@@ -14,10 +14,10 @@
             }, 2000);
         }
 
-        taskA(3, 4, (res) => {
-            console.log("A task result:", res);
-        });
-        console.log("코드 끝");
+        // taskA(3, 4, (res) => {
+        //     console.log("A task result:", res);
+        // });
+        // console.log("코드 끝");
 
         function taskB(a, cb) {
             setTimeout(() => {
@@ -26,9 +26,9 @@
             }, 1000);
         }
 
-        taskB(5, (res) => {
-            console.log("B task result:", res);
-        })
+        // taskB(5, (res) => {
+        //     console.log("B task result:", res);
+        // })
 
         function taskC(a, cb) {
             setTimeout(() => {
@@ -37,9 +37,21 @@
             }, 3000);
         }
 
-        taskC(10, (res) => {
-            console.log("C task result:", res);
-        })
+        // taskC(10, (res) => {
+        //     console.log("C task result:", res);
+        // })
+
+        //콜백지옥 = 가독성이 떨어진다
+        //해결방법 > Promise
+        taskA(4, 5, (a_res) => {
+            console.log("A RESULT:", a_res);
+            taskB(a_res, (b_res) => {
+                console.log("B RESULT:", b_res);
+                taskC(b_res, (c_res) => {
+                    console.log("C RESULT:", c_res);
+                });
+            });
+        });
     </script>
 </body>
 </html>
