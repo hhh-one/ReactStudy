@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async & await - 직관적인 비동기 처리 코드 작성하기</title>
+</head>
+<body>
+    <script>
+        function hello() {
+            return 'hello';
+        }
+
+        async function helloAsync() {
+            return "hello async";
+        }
+
+        console.log(hello());
+        console.log(helloAsync()); //promise객체
+
+        helloAsync().then(res => console.log(res));
+    </script>
+</body>
+</html>
